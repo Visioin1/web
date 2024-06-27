@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Outline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #f7b42c;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .container::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+        .left, .right {
+            padding: 20px;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::before, .right::before {
+            content: " ";
+            position: absolute;
+            top: 22px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 4px solid #f7b42c;
+            z-index: 1;
+        }
+        .left::before {
+            left: 50%;
+            margin-left: -16px;
+        }
+        .right::before {
+            right: 50%;
+            margin-right: -16px;
+        }
+        .right::after {
+            content: "";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 50%;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        .left::after {
+            content: "";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 50%;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        .right .content {
+            left: -100%;
+        }
+        .left .content {
+            left: 0;
+        }
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .left::after, .right::after {
+                left: 60px;
+            }
+            .right {
+                left: 0;
+            }
+            .left {
+                left: 0;
+            }
+            .right .content {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="timeline">
+            <div class="left">
+                <div class="content">
+                    <h2>1</h2>
+                    <h3>Basics of Java</h3>
+                    <p>Are you starting with your coding journey? Not to worry. We will cover all the Basics of Java required for DSA.</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="content">
+                    <h2>2</h2>
+                    <h3>Data Structures 1</h3>
+                    <p>In this part we will study about Arrays, Strings, Bit Manipulation and HashMap.</p>
+                </div>
+            </div>
+            <div class="left">
+                <div class="content">
+                    <h2>3</h2>
+                    <h3>Recursion, Searching and Sorting</h3>
+                    <p>We will discuss how you can develop any recursion problem by following 3 steps. Then we will do Searching and Sorting.</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="content">
+                    <h2>4</h2>
+                    <h3>Data Structures 2</h3>
+                    <p>Let's start the 2nd wave of Data Structures that are LinkedList, Stacks, Queues, Trees and Heaps.</p>
+                </div>
+            </div>
+            <div class="left">
+                <div class="content">
+                    <h2>5</h2>
+                    <h3>DP and Graphs</h3>
+                    <p>Welcome to the toughest topic of DSA. We will do AlgoPrep which will help you understand it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
